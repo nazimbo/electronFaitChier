@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trajet Details</title>
+</head>
+
+<body>
+    <form>
+        <label>First Name: <input id="firstname" value="{{firstname}}" /></label><br>
+        <label>Last Name: <input id="lastname" value="{{lastname}}" /></label><br>
+        <label>Transport: <input id="transport" value="{{transport}}" /></label><br>
+        <label>Passagers: <input id="passagers" value="{{transportObject.passagers}}" /></label><br>
+        <label>Distance: <input id="distance" value="{{transportObject.distance}}" /></label><br>
+        <label>ConsommationPersonneKm: <input id="consommationPersonneKm"
+                value="{{transportObject.consommationPersonneKm}}" /></label><br>
+        <label>ConsommationTotale: <input id="consommationTotale"
+                value="{{transportObject.consommationTotale}}" /></label><br>
+    </form>
+    <button id="save-button">Save</button>
+    <script src="trajetDetails.js"></script>
+</body>
+
+</html>

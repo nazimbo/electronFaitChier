@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trajets</title>
+</head>
+
+<body>
+    <div id="trajet-container"></div>
+
+    <script>
+        // Get the container element
+        const container = document.getElementById("trajet-container");
+
+        // Fetch the trajets data
+        fetch("trajets.json")
+            .then((response) => response.json())
+            .then((data) => {
+                // Loop through the data and create buttons for each trajet
+                data.forEach((trajet, index) => {
+                    const button = document.createElement("button");
+                    button.innerText = `${index + 1} - ${trajet.firstname} ${trajet.lastname}`;
+                    button.addEventListener("click", () => {
+                        // redirect to more details page
+                        window.location.href = `trajetDetails.html?index=${index}`;
+                    });
+                    container.appendChild(button);
+                });
+            });
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
